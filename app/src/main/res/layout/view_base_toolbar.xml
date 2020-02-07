@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spacing_55"
+    android:background="@color/colorPrimary"
+    android:id="@+id/view_toolbar"
+    >
+    <RelativeLayout
+        android:id="@+id/toolbar_view_back"
+        android:layout_width="@dimen/spacing_55"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_toolbar_back_white"
+            android:contentDescription="" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/toolbar_tv_title"
+        style="@style/CVTextViewWhite"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="@dimen/ts_17"
+        android:text="@string/app_name"
+        />
+
+</RelativeLayout>

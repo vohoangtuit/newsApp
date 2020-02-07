@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_marginTop="@dimen/spacing_5"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    >
+    <TextView
+        android:id="@+id/item_date_section_header_tv_date"
+        android:text="@string/app_name"
+        android:background="@color/c_a6a8b0"
+       style="@style/CVTextViewPrimary"
+        android:paddingStart="@dimen/spacing_10"
+        android:paddingEnd="@dimen/spacing_10"
+       android:textStyle="italic"
+      />
+</LinearLayout>

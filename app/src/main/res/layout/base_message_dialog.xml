@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        style="@style/LinearLayoutVerticalFullWidth"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/bg_white_solid_no_border_5_radius"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/base_notify_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_60"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="Message"
+            style="@style/CVTextViewPrimaryMedium"
+            android:textAllCaps="true"
+             />
+
+        <!--<include layout="@layout/view_line" />-->
+
+        <TextView
+            android:id="@+id/base_notify_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="10dp"
+            style="@style/CVTextViewBlackMedium"
+            android:text="......." />
+
+        <TextView
+            android:id="@+id/base_notify_tv_ok"
+            android:layout_width="@dimen/spacing_120"
+            android:layout_height="@dimen/spacing_35"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_gold_solid_no_border_30_radius"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/CVTextViewWhite"
+            android:text="OK" />
+    </LinearLayout>
+</RelativeLayout>

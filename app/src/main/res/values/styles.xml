@@ -7,5 +7,230 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="dialog_full_transparent_background">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--    co.tpcreative.vietlife.components.CVTextView-->
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+    </style>
+    <!--custom textview-->
+    <style name="CVTextViewDefault" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/ts_12_5</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="CVTextViewBlack" parent="CVTextViewDefault">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CVTextViewBlackBold" parent="CVTextViewBlack">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewBlackMedium" parent="CVTextViewBlack">
+        <item name="android:textSize">@dimen/ts_14_5</item>
+    </style>
+
+    <style name="CVTextViewBlackMediumBold" parent="CVTextViewBlackMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewBlackLarge" parent="CVTextViewBlack">
+        <item name="android:textSize">@dimen/ts_18</item>
+    </style>
+
+    <style name="CVTextViewBlackLargeBold" parent="CVTextViewBlackLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--    -->
+    <style name="CVTextViewWhite" parent="CVTextViewDefault">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CVTextViewWhiteBold" parent="CVTextViewWhite">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewWhiteMedium" parent="CVTextViewWhite">
+        <item name="android:textSize">@dimen/ts_14_5</item>
+    </style>
+
+    <style name="CVTextViewWhiteMediumBold" parent="CVTextViewWhiteMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewWhiteLarge" parent="CVTextViewWhite">
+        <item name="android:textSize">@dimen/ts_18</item>
+    </style>
+
+    <style name="CVTextViewWhiteLargeBold" parent="CVTextViewWhiteLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    -->
+    <style name="CVTextViewPrimary" parent="CVTextViewDefault">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="CVTextViewPrimaryBold" parent="CVTextViewPrimary">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewPrimaryMedium" parent="CVTextViewPrimary">
+        <item name="android:textSize">@dimen/ts_14_5</item>
+    </style>
+
+    <style name="CVTextViewPrimaryMediumBold" parent="CVTextViewPrimaryMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewPrimaryLarge" parent="CVTextViewPrimary">
+        <item name="android:textSize">@dimen/ts_18</item>
+    </style>
+
+    <style name="CVTextViewPrimaryLargeBold" parent="CVTextViewPrimaryLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--    -->
+    <style name="CVTextViewRed" parent="CVTextViewDefault">
+        <item name="android:textColor">@color/colorRed</item>
+    </style>
+
+    <style name="CVTextViewRedBold" parent="CVTextViewRed">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewRedMedium" parent="CVTextViewRed">
+        <item name="android:textSize">@dimen/ts_14_5</item>
+    </style>
+
+    <style name="CVTextViewRedMediumBold" parent="CVTextViewRedMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CVTextViewRedLarge" parent="CVTextViewRed">
+        <item name="android:textSize">@dimen/ts_18</item>
+    </style>
+
+    <style name="CVTextViewRedLargeBold" parent="CVTextViewRedLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--    -->
+    <style name="CVTextViewGray" parent="CVTextViewDefault">
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+    <style name="CVTextViewGrayBold" parent="CVTextViewGray">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CVTextViewGrayMedium" parent="CVTextViewGray">
+        <item name="android:textSize">@dimen/ts_14_5</item>
+    </style>
+    <style name="CVTextViewGrayMediumBold" parent="CVTextViewGrayMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CVTextViewGrayLarge" parent="CVTextViewGray">
+        <item name="android:textSize">@dimen/ts_18</item>
+    </style>
+    <style name="CVTextViewGrayLargeBold" parent="CVTextViewGrayLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CVTextViewHome" parent="CVTextViewWhite">
+        <item name="android:paddingStart">@dimen/spacing_10</item>
+        <item name="android:layout_width">@dimen/spacing_190</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">@dimen/spacing_10</item>
+        <item name="android:paddingTop">@dimen/spacing_8</item>
+        <item name="android:paddingBottom">@dimen/spacing_8</item>
+        <item name="android:layout_marginTop">@dimen/spacing_25</item>
+        <item name="android:background">@drawable/bg_gold_solid_no_border_30_radius</item>
+    </style>
+    <style name="CVTextViewButtonUpload" parent="CVTextViewHome">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingEnd">@dimen/spacing_20</item>
+        <item name="android:paddingStart">@dimen/spacing_20</item>
+        <item name="android:layout_marginTop">@dimen/spacing_0</item>
+    </style>
+    <!--  custom Edittext  -->
+
+    <style name="CVEditTextDefault" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c_2d2d2d</item>
+        <item name="android:textColorHint">@color/c_a6a8b0</item>
+        <item name="android:textSize">@dimen/ts_13_5</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_edittex</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/spacing_8</item>
+        <item name="android:inputType">text</item>
+        <!--        <item name="android:fontFamily">@font/regular</item>-->
+        <!--        <item name="fontFamily">@font/regular</item>-->
+    </style>
+
+    <style name="CVEditTextBack" parent="CVEditTextDefault">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CVEditTextPrimary" parent="CVEditTextDefault">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="CVEditTextInputDefault" parent="CVEditTextDefault">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/c_D6D7DA</item>
+        <item name="android:padding">@dimen/spacing_8</item>
+    </style>
+    <!--  custom Linnerlayout  -->
+    <style name="LinearLayoutVerticalParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LinearLayoutDefault">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LinearLayoutVerticalFullWidth" parent="LinearLayoutDefault">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="LinearLayoutVerticalFullWidthHeight" parent="LinearLayoutVerticalFullWidth">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LinearLayoutHorizontalFullWidth" parent="LinearLayoutDefault">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LinearLayoutHorizontalFullWidthHeight" parent="LinearLayoutHorizontalFullWidth">
+        <item name="android:layout_height">match_parent</item>
+    </style>
 </resources>
