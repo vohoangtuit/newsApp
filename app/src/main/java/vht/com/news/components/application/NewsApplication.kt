@@ -1,5 +1,8 @@
 package vht.com.news.components.application
 
+import android.annotation.SuppressLint
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.facebook.stetho.Stetho
@@ -12,9 +15,24 @@ import vht.com.news.base.BaseApplication
 class NewsApplication : BaseApplication(), LifecycleObserver {
     override fun onCreate() {
         super.onCreate()
+        instance = this
+        context = applicationContext
         Realm.init(this)
         setupLifecycleListener()
         initRealmData()
+    }
+    companion object {
+        val TAG = BaseApplication::class.java
+            .simpleName
+        @SuppressLint("StaticFieldLeak")
+        @get:Synchronized
+        var instance: BaseApplication? = null
+            private set
+        @SuppressLint("StaticFieldLeak")
+        var context: Context? = null
+            private set
+        var activeActivity: AppCompatActivity? = null
+
     }
      fun setupLifecycleListener() {
         ProcessLifecycleOwner.get().lifecycle

@@ -14,29 +14,7 @@ class News {
 
     @SerializedName("articles")
     @Expose
-    private var article: List<Article?>? = null
+    var article: ArrayList<Article> = ArrayList()
 
-    fun getStatus(): String? {
-        return status
-    }
 
-    fun setStatus(status: String?) {
-        this.status = status
-    }
-
-    fun getTotalResult(): Int {
-        return totalResult
-    }
-
-    fun setTotalResult(totalResult: Int) {
-        this.totalResult = totalResult
-    }
-
-    fun getArticle(): List<Article?>? {
-        return article
-    }
-
-    fun setArticle(article: List<Article?>?) {
-        this.article = article
-    }
 }

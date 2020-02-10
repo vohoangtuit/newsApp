@@ -68,4 +68,8 @@ dependencies {
     /* FACEBOOK STETHO */
     implementation 'com.facebook.stetho:stetho:1.5.1'
     implementation 'com.uphyca:stetho_realm:2.3.0'
+
+
+//Times Formater
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
 }
