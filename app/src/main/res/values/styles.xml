@@ -75,7 +75,7 @@
     </style>
     <style name="CVTextViewWhiteError" parent="CVTextViewDefault">
         <item name="android:textColor">@android:color/holo_red_dark</item>
-        <item name="android:textSize">@dimen/ts_10</item>
+        <item name="android:textSize">@dimen/ts_11_5</item>
     </style>
 
     <style name="CVTextViewWhiteBold" parent="CVTextViewWhite">

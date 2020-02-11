@@ -5,8 +5,7 @@ import android.view.View
 import android.webkit.WebViewClient
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
-import com.krishna.fileloader.utility.Utils
+import com.google.android.material.appbar.AppBarLayout
 import kotlinx.android.synthetic.main.fragment_detail_news.*
 import vht.com.news.R
 import vht.com.news.features.general.fragment.GeneralFragment
@@ -14,7 +13,9 @@ import vht.com.news.models.Article
 import vht.com.news.utils.TimeFormat
 import vht.com.news.utils.Utils.glideRequestOptions
 
-class NewsDetailScreen: GeneralFragment() {
+
+class NewsDetailScreen: GeneralFragment(), AppBarLayout.OnOffsetChangedListener {
+    var isHideToolbarView = false
     companion object{
         private const val USER_MODEL = "UserModel"
         fun newInstance(article: Article): NewsDetailScreen {
@@ -46,6 +47,9 @@ class NewsDetailScreen: GeneralFragment() {
         getActiveActivity().supportActionBar!!.title = ""
         getActiveActivity().getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         collapsing_toolbar.setTitle("")
+        toolbar.setNavigationOnClickListener(View.OnClickListener {
+            onBackPressed()
+        })
     }
     fun handleData(article: Article){
         Glide.with(this)
@@ -84,5 +88,20 @@ class NewsDetailScreen: GeneralFragment() {
         webView.loadUrl(url)
 
 
+    }
+
+    override fun onOffsetChanged(appBarLayout: AppBarLayout?, verticalOffset: Int) {
+        val maxScroll = appBarLayout!!.totalScrollRange
+        val percentage = Math.abs(verticalOffset).toFloat() / maxScroll.toFloat()
+
+        if (percentage == 1f && isHideToolbarView) {
+            date_behavior.visibility = View.GONE
+            title_appbar.visibility=View.VISIBLE
+            isHideToolbarView = !isHideToolbarView
+        } else if (percentage < 1f && !isHideToolbarView) {
+            date_behavior.visibility = View.VISIBLE
+            title_appbar.visibility=View.GONE
+            isHideToolbarView = !isHideToolbarView
+        }
     }
 }
