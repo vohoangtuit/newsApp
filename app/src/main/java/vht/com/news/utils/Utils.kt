@@ -41,4 +41,8 @@ object Utils {
         requestOptions.centerCrop()
         return requestOptions
     }
+
+    fun isEmpty(str: String?): Boolean {
+        return str == null || str.isEmpty()
+    }
 }

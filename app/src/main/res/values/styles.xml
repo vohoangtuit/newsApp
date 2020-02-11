@@ -24,6 +24,10 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="MyAppBarLayoutTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
     <!--    co.tpcreative.vietlife.components.CVTextView-->
     <style name="TextView" parent="Widget.AppCompat.TextView">
     </style>
@@ -68,6 +72,10 @@
     <!--    -->
     <style name="CVTextViewWhite" parent="CVTextViewDefault">
         <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="CVTextViewWhiteError" parent="CVTextViewDefault">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">@dimen/ts_10</item>
     </style>
 
     <style name="CVTextViewWhiteBold" parent="CVTextViewWhite">
@@ -182,14 +190,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/c_2d2d2d</item>
         <item name="android:textColorHint">@color/c_a6a8b0</item>
-        <item name="android:textSize">@dimen/ts_13_5</item>
+        <item name="android:textSize">@dimen/ts_14</item>
         <item name="android:textCursorDrawable">@drawable/cursor_edittex</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">@dimen/spacing_8</item>
         <item name="android:inputType">text</item>
-        <!--        <item_news name="android:fontFamily">@font/regular</item_news>-->
-        <!--        <item_news name="fontFamily">@font/regular</item_news>-->
     </style>
 
     <style name="CVEditTextBack" parent="CVEditTextDefault">
@@ -203,7 +209,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/c_D6D7DA</item>
-        <item name="android:padding">@dimen/spacing_8</item>
+        <item name="android:padding">@dimen/spacing_10</item>
     </style>
     <!--  custom Linnerlayout  -->
     <style name="LinearLayoutVerticalParent">

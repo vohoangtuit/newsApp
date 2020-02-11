@@ -1,4 +1,4 @@
-package vht.com.news.components.dialog
+package vht.com.news.features.general.dialog
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.base_message_dialog.*

@@ -4,4 +4,25 @@
     <string name="string_top_headline">Top Headline</string>
     <string name="string_top_preferences">Preferences</string>
     <string name="string_top_profile">Profile</string>
+
+    <string name="string_register">Register Account</string>
+    <string name="string_logout">Logout</string>
+    <string name="string_username">Username:</string>
+    <string name="string_enter_username">Enter Username</string>
+    <string name="string_email">Email:</string>
+    <string name="string_enter_email">Enter Email</string>
+    <string name="string_password">Password:</string>
+    <string name="string_enter_password">Enter Password</string>
+    <string name="string_confirm_password">Confirm Password:</string>
+
+    <string name="string_error">Error</string>
+    <string name="string_error_please_enter_username">please enter username</string>
+    <string name="string_error_username_more_than_character">the username must more than 10 character</string>
+
+    <string name="string_error_please_enter_email">please enter email</string>
+    <string name="string_error_please_email_invalid">email invalid</string>
+    <string name="string_error_please_enter_password">please enter password</string>
+    <string name="string_error_password_not_math">password not match</string>
+    <string name="string_error_password_invalid">the username must more than 5 character</string>
+
 </resources>

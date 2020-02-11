@@ -1,4 +1,4 @@
-package vht.com.news.components.dialog
+package vht.com.news.features.general.dialog
 
 import android.app.Dialog
 import android.graphics.Color

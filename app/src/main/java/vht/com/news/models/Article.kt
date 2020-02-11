@@ -2,9 +2,10 @@ package vht.com.news.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
-class Article {
+class Article : Serializable{
     @SerializedName("source")
     @Expose
     var source: Source? = null

@@ -23,7 +23,7 @@
         style="@style/CVTextViewWhite"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:textSize="@dimen/ts_17"
+        android:textSize="@dimen/ts_18"
         android:text="@string/app_name"
         />
 
