@@ -1,60 +1,52 @@
 package vht.com.news.features.detailNews
 
-import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.appbar.AppBarLayout
+import kotlinx.android.synthetic.main.base_message_dialog.*
 import kotlinx.android.synthetic.main.fragment_detail_news.*
 import vht.com.news.R
-import vht.com.news.features.general.fragment.GeneralFragment
+import vht.com.news.features.general.dialog.GeneralDialog
 import vht.com.news.models.Article
 import vht.com.news.utils.TimeFormat
-import vht.com.news.utils.Utils.glideRequestOptions
+import vht.com.news.utils.Utils
 
-
-class NewsDetailScreen: GeneralFragment(), AppBarLayout.OnOffsetChangedListener {
+class DialogDetail (context: AppCompatActivity, article: Article): GeneralDialog(context), View.OnClickListener,
+    AppBarLayout.OnOffsetChangedListener{
     var isHideToolbarView = false
-    companion object{
-        private const val NEWS_MODEL = "NewsModel"
-        fun newInstance(article: Article): NewsDetailScreen {
-            val fragment = NewsDetailScreen()
-            val args = Bundle()
-            args.putSerializable(NEWS_MODEL, article)
-            fragment.arguments = args
-            return fragment
-        }
-        lateinit var article : Article
-    }
+
+    var mContext =context
+    var mArticle =article
     override fun getRootLayoutId(): Int {
-        return R.layout.fragment_detail_news
-    }
+        return R.layout.fragment_detail_news    }
 
-    override fun onBindView() {
+    override fun initContentView() {
+       setFullScreen()
         initTolbar()
-        if (arguments != null) {
-            val article = arguments!!.getSerializable(NEWS_MODEL) as Article
-            handleData(article)
-        }
+        handleData(mArticle)
     }
 
-    override fun onBaseResume() {
-       showToolbar(false)
+    override fun onClick(v: View?) {
+
     }
+
     fun initTolbar(){
-        getActiveActivity().setSupportActionBar(toolbar)
-        getActiveActivity().supportActionBar!!.title = ""
-        getActiveActivity().getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
+        mContext.setSupportActionBar(toolbar)
+        mContext.supportActionBar!!.title = ""
+        mContext.getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         collapsing_toolbar.setTitle("")
         toolbar.setNavigationOnClickListener(View.OnClickListener {
-            onBackPressed()
+            dismiss()
         })
     }
     fun handleData(article: Article){
-        Glide.with(this)
+        Glide.with(mContext)
             .load(article.urlToImage)
-            .apply(glideRequestOptions())
+            .apply(Utils.glideRequestOptions())
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(backdrop)
 
@@ -69,7 +61,7 @@ class NewsDetailScreen: GeneralFragment(), AppBarLayout.OnOffsetChangedListener 
             ""
         }
 
-       // time.setText(article.source + author + " \u2022 " + Utils.DateToTimeFormat(mDate))
+        // time.setText(article.source + author + " \u2022 " + Utils.DateToTimeFormat(mDate))
 
         initWebView(article.urlToImage.toString())
     }
@@ -101,4 +93,6 @@ class NewsDetailScreen: GeneralFragment(), AppBarLayout.OnOffsetChangedListener 
             isHideToolbarView = !isHideToolbarView
         }
     }
+
+
 }

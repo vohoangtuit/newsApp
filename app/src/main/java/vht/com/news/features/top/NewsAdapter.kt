@@ -43,38 +43,12 @@ class NewsAdapter(inflater: LayoutInflater, items: ArrayList<Article>, itemClick
             holder.time.text =" \u2022 " + TimeFormat.DateToTimeFormat(data.publishedAt)
             holder.published_ad.text=TimeFormat.DateFormat(data.publishedAt)
 
-            Glide.with(activeActivity!!)
-                .load(data.urlToImage)
-                .apply(Utils.glideRequestOptions())
-                .listener(object : RequestListener<Drawable?> {
-                    override fun onLoadFailed(
-                        @Nullable e: GlideException?, model: Any,
-                        target: Target<Drawable?>,
-                        isFirstResource: Boolean
-                    ): Boolean {
-                        holder.progressBar.setVisibility(View.GONE)
-                        return false
-                    }
+            Glide.with(activeActivity!!).asBitmap().load(data.urlToImage).into(
+                    holder.imageView
+                )
 
-                    override fun onResourceReady(
-                        resource: Drawable?,
-                        model: Any,
-                        target: Target<Drawable?>,
-                        dataSource: DataSource,
-                        isFirstResource: Boolean
-                    ): Boolean {
-                        holder.progressBar.setVisibility(View.GONE)
-                        return false
-                    }
-                })
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(holder.imageView)
 
         }
-
-
-
-
 
     }
 }

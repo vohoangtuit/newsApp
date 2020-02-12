@@ -1,5 +1,6 @@
 package vht.com.news.features.main
 
+import androidx.core.view.isVisible
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.*
@@ -17,7 +18,7 @@ class MainScreen : GeneralFragment(){
     }
 
     override fun onBindView() {
-        initTabLayout();
+        initTabLayout()
     }
 
     override fun onBaseResume() {
@@ -70,5 +71,8 @@ class MainScreen : GeneralFragment(){
 
         act_main_tab_iv_profile.isSelected=false
         act_main_tab_tv_profile.isSelected=false
+    }
+    fun showTabMenu(show: Boolean){
+        appBarLayout.isVisible = show
     }
 }

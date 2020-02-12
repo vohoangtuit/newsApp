@@ -12,5 +12,6 @@ interface ApiInterface {
 
 
     @GET("everything")
-    fun getNewsSearch(@Query("q") keyword: String?, @Query("language") language: String?, @Query("sortBy") sortBy: String?, @Query("apiKey") apiKey: String?): Observable<News>
+    fun searchNews(@Query("q") keyword: String?, @Query("language") language: String?, @Query("sortBy") sortBy: String?, @Query("apiKey") apiKey: String?): Observable<News>
 }
+

@@ -10,7 +10,7 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class GeneralDialog(private val activity: AppCompatActivity) : Dialog(activity) {
+abstract class GeneralDialog( val activity: AppCompatActivity) : Dialog(activity) {
     abstract fun getRootLayoutId(): Int
     abstract fun initContentView()
     override fun onCreate(savedInstanceState: Bundle?) {

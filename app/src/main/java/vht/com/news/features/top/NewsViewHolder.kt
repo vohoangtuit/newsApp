@@ -16,7 +16,5 @@ class NewsViewHolder(itemView: View) : ItemViewHolder<Article>(itemView) {
     var source : TextView= itemView.source
     var time : TextView= itemView.time
     var imageView : ImageView= itemView.img
-    var progressBar : ProgressBar= itemView.prograss_load_photo
-
 
 }

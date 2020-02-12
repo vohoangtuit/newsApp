@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
         android:theme="@style/MyAppBarLayoutTheme">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -54,7 +55,7 @@
                     android:layout_alignParentBottom="true"
                     android:src="@drawable/bottom_shadow"
                     android:id="@+id/img2"
-                    android:layout_alignBottom="@id/img"
+
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="80dp" />
@@ -65,8 +66,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:contentInsetStart="0dp"
-                android:contentInsetLeft="0dp"
+                android:background="@android:color/transparent"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
@@ -82,7 +82,7 @@
                     <TextView
                         android:id="@+id/title_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
-                        android:text="News for you"
+                        android:text=""
                         android:textSize="18dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                     <TextView
                         android:id="@+id/subtitle_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
-                        android:text="Subtitle"
+                        android:text=""
                         android:textSize="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/titleNew"
                         android:textColor="@color/colorTextTitle"
                         android:textStyle="bold"
                         android:fontFamily="sans-serif-light"
@@ -150,7 +150,7 @@
                         android:id="@+id/time"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
-                        android:layout_below="@id/title"
+                        android:layout_below="@id/titleNew"
                         android:layout_marginTop="10dp"
                         android:maxLines="1"
                         android:drawablePadding="10dp"
