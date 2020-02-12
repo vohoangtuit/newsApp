@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+    <include layout="@layout/view_line_0_5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/act_main_tab_iv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/tap_top_selector"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/act_main_tab_tv_top"
+                android:text="@string/string_top_headline"
+                 style="@style/CVTextViewTabMenu"
+                android:textColor="@drawable/menu_text_selector"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/act_main_tab_iv_preferences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_preference_gray"
+                android:background="@drawable/tab_preferences_selecttor"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/act_main_tab_tv_preferences"
+                android:text="@string/string_top_preferences"
+                style="@style/CVTextViewTabMenu"
+                android:textColor="@drawable/menu_text_selector"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/act_main_tab_iv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/tab_profile_selector"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/act_main_tab_tv_profile"
+                android:text="@string/string_top_profile"
+                style="@style/CVTextViewTabMenu"
+                android:textColor="@drawable/menu_text_selector"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

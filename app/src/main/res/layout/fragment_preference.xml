@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   style="@style/LinearLayoutVerticalParent">
+    <vht.com.news.components.recyclerview.CVRecyclerView
+        android:id="@+id/rcv_catalogue"
+        android:layout_width="match_parent"
+
+        tools:listitem="@layout/item_catalogue"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"/>
+    <vht.com.news.components.recyclerview.CVRecyclerView
+        android:id="@+id/recycler_search"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </vht.com.news.components.recyclerview.CVRecyclerView>
+
+</LinearLayout>
