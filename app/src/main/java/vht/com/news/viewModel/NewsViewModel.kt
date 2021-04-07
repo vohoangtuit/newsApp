@@ -29,18 +29,20 @@ class NewsViewModel: BaseViewModel() {
 
     fun getListNews(sfreshLayout : SwipeRefreshLayout) {
         sfreshLayout.setRefreshing(true)
-        disposables.add(ApiService.getAPIService().getNews(COUNTRY_CODE,BuildConfig.NEW_API_KEY)//getCountry()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .doOnSubscribe { showLoading(false) }
-            .doFinally { showLoading(false) }
-            .subscribe(fun(it: News) {
-                listNewsResponse.value = it
-                sfreshLayout.setRefreshing(false)
-            }, {
-                showFailure(it)
-                sfreshLayout.setRefreshing(false)
-            }))
+        with(disposables) {
+            add(ApiService.getAPIService().getNews(COUNTRY_CODE,BuildConfig.NEW_API_KEY)//getCountry()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe { showLoading(false) }
+                .doFinally { showLoading(false) }
+                .subscribe(fun(it: News) {
+                    listNewsResponse.value = it
+                    sfreshLayout.setRefreshing(false)
+                }, {
+                    showFailure(it)
+                    sfreshLayout.setRefreshing(false)
+                }))
+        }
     }
     fun searchNews(keyword: String) {
         disposables.add(ApiService.getAPIService().searchNews(keyword, LANGUAGE, "publishedAt",BuildConfig.NEW_API_KEY)//getCountry()
